@@ -1,0 +1,15 @@
+<div class="back">
+  <div class="container">
+    <div class="border-div">
+      <h1>Binary to Decimal converter</h1>
+      <p>Enter a binary number</p>
+      <input type="text" #input (keyup)="validation(input.value)">
+      <div class="error" >
+        <p [hidden]="hidden">Characters other than 0 and 1 are not accepted!</p>
+      </div>
+      <p class="dec">Decimal:</p>
+      <input type="text" readonly [value]="convert(input.value)">
+    </div>
+  </div>
+</div>
+
